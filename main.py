@@ -10,7 +10,8 @@ def get_python_version() -> str:
 def get_connection_string() -> str:
     load_dotenv()
     pwd: str = os.environ.get('mongodb_pwd')
-    return f'mongodb+srv://frederickmorrison1953:{pwd}@pymongocluster.6sstkik.mongodb.net/?retryWrites=true&w=majority&appName=pymongoCluster'
+    # WARNING: need to add authSource=admin for other useful commands to work
+    return f'mongodb+srv://frederickmorrison1953:{pwd}@pymongocluster.6sstkik.mongodb.net/?retryWrites=true&w=majority&appName=pymongoCluster&authSource=admin'
 
 
 def get_mongodb_connection() -> MongoClient:
