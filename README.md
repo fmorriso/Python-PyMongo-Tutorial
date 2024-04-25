@@ -5,8 +5,11 @@
 
 ##Tools Used
 * Python 3.12.3
+* PyMongo 4.7
 * PyCharm 2024.1
 * VSCode 1.88.1
+##Installs
+* ```python -m pip install "pymongo[srv]"```
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
