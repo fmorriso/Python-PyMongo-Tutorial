@@ -1,7 +1,12 @@
 # python-pymongo-tutorial
 
+##References
+* [PyMongo Tutorial](https://pymongo.readthedocs.io/en/stable/tutorial.html)
 
-
+##Tools Used
+* Python 3.12.3
+* PyCharm 2024.1
+* VSCode 1.88.1
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
