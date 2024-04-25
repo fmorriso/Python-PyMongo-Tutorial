@@ -33,5 +33,13 @@ def verify_mongodb_database():
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
+    client = get_mongodb_connection()
     verify_mongodb_connection_works()
     verify_mongodb_database()
+    # FAILURES START HERE:
+    # try to get MongoDB version number at runtime
+    #FAILS: print(f'{client.server_info()=}')
+    #FAILS: print(f'{client.version()=}')
+    #FAILS: version = client.server_info()["version"]
+    version = client.command({'buildInfo': 1})['version']
+    print(f'{version=}')
