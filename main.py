@@ -1,4 +1,6 @@
 import os, sys
+
+import pymongo
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
@@ -30,6 +32,8 @@ def verify_mongodb_database():
     db = client['user_shopping_list']
     print(f'{db=}')
 
+def get_pymongo_version() -> str:
+    return pymongo.get_version_string()
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
@@ -41,5 +45,6 @@ if __name__ == '__main__':
     #FAILS: print(f'{client.server_info()=}')
     #FAILS: print(f'{client.version()=}')
     #FAILS: version = client.server_info()["version"]
-    version = client.command({'buildInfo': 1})['version']
-    print(f'{version=}')
+    # version = client.command({'buildInfo': 1})['version']
+    #print(f'{version=}')
+    print(f'{get_pymongo_version()=}')
