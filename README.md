@@ -11,7 +11,7 @@
 ##Installs
 * ```python -m pip install "pymongo[srv]"```
 ## What Mother (MongoDB and/or PyMongo) Never Told You But You need to know
-* WARNING: need to add authSource=admin to the Query String portion of the connection information in order for other useful commands to work:
+* WARNING: need to add ```authSource=admin``` to the Query String portion of the connection information in order for other useful commands to work:
 ```python
     return f'mongodb+srv://frederickmorrison1953:{pwd}@pymongocluster.6sstkik.mongodb.net/?retryWrites=true&w=majority&appName=pymongoCluster&authSource=admin'
 ```
