@@ -1,8 +1,9 @@
-import os, sys
+import os
+import sys
 
 import pymongo
-from pymongo import MongoClient
 from dotenv import load_dotenv
+from pymongo import MongoClient
 
 
 def get_python_version() -> str:
@@ -55,31 +56,28 @@ def display_mongodb_collections():
     print('DEBUG: top of display_mongodb_collections')
     client = get_mongodb_client()
     db = client['sample_mflix']
-    print(f'{db=}')
-    # HANGS AFTER THIS SOMEWHERE
+    print(f'{db.name=}')
     # List all the collections in 'sample_mflix':
-    #
-    # collections = db.list_collection_names()
-    # for collection in collections:
-    #     print(f'{collection=}')
-
+    collections = db.list_collection_names()
+    for collection in collections:
+        print(f'\t{collection=}')
+    print('DEBUG: bottom of display_mongodb_collections')
 
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
-    #get_mongodb_version()
-    display_mongodb_collections()
     verify_mongodb_connection_works()
-    #HANGS: verify_mongodb_database()
-    #display_mongodb_collections()
+    display_mongodb_collections()
+    # get_mongodb_version()
+    # HANGS: verify_mongodb_database()
     # FAILURES START HERE:
     # client = get_mongodb_client()
     # try to get MongoDB version number at runtime
-    #FAILS print(f'{client.server_info()=}')
-    #FAILS: print(f'{client.version()=}')
-    #FAILS: version = client.server_info()["version"]
+    # FAILS print(f'{client.server_info()=}')
+    # FAILS: print(f'{client.version()=}')
+    # FAILS: version = client.server_info()["version"]
     # version = client.command({'buildInfo': 1})['version']
-    #print(f'{version=}')
+    # print(f'{version=}')
     # print(f'{get_pymongo_version()=}')
 
     print('DEBUG: end of program')
