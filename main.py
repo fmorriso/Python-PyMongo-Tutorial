@@ -64,10 +64,41 @@ def display_mongodb_collections():
     print('DEBUG: bottom of display_mongodb_collections')
 
 
+def display_american_cuisine_restaurants():
+    #from pymongo import MongoClient
+
+    # Requires the PyMongo package.
+    # https://api.mongodb.com/python/current
+
+    client = get_mongodb_client()
+    result = client['sample_restaurants']['restaurants'].aggregate([
+        {
+            '$match': {
+                'cuisine': 'American'
+            }
+        }, {
+            '$sort': {
+                'address.zipcode': 1
+            }
+        }, {
+            '$project': {
+                '_id': 0,
+                'name': 1,
+                'address.zipcode': 1,
+                'borough': 1,
+                'cuisine': 1
+            }
+        }
+    ])
+    for r in result:
+        print(r)
+        print(f"{r['name']=} {r['borough']=}")
+
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
     verify_mongodb_connection_works()
     display_mongodb_collections()
+    display_american_cuisine_restaurants()
     # get_mongodb_version()
     # HANGS: verify_mongodb_database()
     # FAILURES START HERE:
