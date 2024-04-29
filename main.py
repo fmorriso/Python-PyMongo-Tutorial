@@ -71,14 +71,14 @@ def display_american_cuisine_restaurants():
     # https://api.mongodb.com/python/current
 
     client = get_mongodb_client()
-    result = client['sample_restaurants']['restaurants'].aggregate([
+    results = client['sample_restaurants']['restaurants'].aggregate([
         {
             '$match': {
                 'cuisine': 'American'
             }
         }, {
             '$sort': {
-                'address.zipcode': 1
+                'name': 1
             }
         }, {
             '$project': {
@@ -90,9 +90,11 @@ def display_american_cuisine_restaurants():
             }
         }
     ])
-    for r in result:
-        print(r)
-        print(f"{r['name']=} {r['borough']=}")
+    # examine the results
+    for result in results:
+        # print(r)
+        print(f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}")
+
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
