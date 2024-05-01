@@ -1,0 +1,251 @@
+{
+  "count": 16,
+  "fields": [
+    {
+      "name": "_id",
+      "path": [
+        "_id"
+      ],
+      "count": 16,
+      "type": "ObjectId",
+      "probability": 1,
+      "hasDuplicates": false,
+      "types": [
+        {
+          "name": "ObjectId",
+          "path": [
+            "_id"
+          ],
+          "count": 16,
+          "probability": 1,
+          "unique": 16,
+          "hasDuplicates": false,
+          "values": [
+            "6631212e476efa50bd891b1c",
+            "6631212e476efa50bd891b1a",
+            "6631212e476efa50bd891b10",
+            "6631212e476efa50bd891b0f",
+            "6631212e476efa50bd891b14",
+            "6631212e476efa50bd891b17",
+            "6631212e476efa50bd891b1b",
+            "6631212e476efa50bd891b12",
+            "6631212e476efa50bd891b11",
+            "6631212e476efa50bd891b1d",
+            "6631212e476efa50bd891b16",
+            "6631212e476efa50bd891b0e",
+            "6631212e476efa50bd891b19",
+            "6631212e476efa50bd891b18",
+            "6631212e476efa50bd891b13",
+            "6631212e476efa50bd891b15"
+          ],
+          "bsonType": "ObjectId"
+        }
+      ]
+    },
+    {
+      "name": "category",
+      "path": [
+        "category"
+      ],
+      "count": 16,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": true,
+      "types": [
+        {
+          "name": "String",
+          "path": [
+            "category"
+          ],
+          "count": 16,
+          "probability": 1,
+          "unique": 6,
+          "hasDuplicates": true,
+          "values": [
+            "T-Shirt",
+            "T-Shirt",
+            "Mask",
+            "Sweater",
+            "T-Shirt",
+            "T-Shirt",
+            "Jacket",
+            "T-Shirt",
+            "T-Shirt",
+            "T-Shirt",
+            "Hat",
+            "Hoodie",
+            "T-Shirt",
+            "T-Shirt",
+            "Hoodie",
+            "T-Shirt"
+          ],
+          "bsonType": "String"
+        }
+      ]
+    },
+    {
+      "name": "id",
+      "path": [
+        "id"
+      ],
+      "count": 16,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": false,
+      "types": [
+        {
+          "name": "Int32",
+          "path": [
+            "id"
+          ],
+          "count": 16,
+          "probability": 1,
+          "unique": 16,
+          "hasDuplicates": false,
+          "values": [
+            15,
+            13,
+            3,
+            2,
+            7,
+            10,
+            14,
+            5,
+            4,
+            16,
+            9,
+            1,
+            12,
+            11,
+            6,
+            8
+          ],
+          "bsonType": "Int32"
+        }
+      ]
+    },
+    {
+      "name": "image",
+      "path": [
+        "image"
+      ],
+      "count": 16,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false,
+      "types": [
+        {
+          "name": "String",
+          "path": [
+            "image"
+          ],
+          "count": 16,
+          "probability": 1,
+          "unique": 16,
+          "hasDuplicates": false,
+          "values": [
+            "/images/vscode.jpg",
+            "/images/vite.jpg",
+            "/images/github.jpg",
+            "/images/css.jpg",
+            "/images/mongodb.png",
+            "/images/python.jpg",
+            "/images/tailwind.jpg",
+            "/images/java.jpg",
+            "/images/html.jpg",
+            "/images/vue.jpg",
+            "/images/npm.jpg",
+            "/images/cplusplus.jpg",
+            "/images/angular.jpg",
+            "/images/react.jpg",
+            "/images/javascript.jpg",
+            "/images/node.js.jpg"
+          ],
+          "bsonType": "String"
+        }
+      ]
+    },
+    {
+      "name": "name",
+      "path": [
+        "name"
+      ],
+      "count": 16,
+      "type": "String",
+      "probability": 1,
+      "hasDuplicates": false,
+      "types": [
+        {
+          "name": "String",
+          "path": [
+            "name"
+          ],
+          "count": 16,
+          "probability": 1,
+          "unique": 16,
+          "hasDuplicates": false,
+          "values": [
+            "VS Code T-Shirt",
+            "Vite T-Shirt",
+            "GitHub Mask",
+            "CSS Sweater",
+            "MongoDB T-Shirt",
+            "Python T-Shirt",
+            "TailwindCSS Jacket",
+            "Java T-Shirt",
+            "HTML T-Shirt",
+            "Vue T-Shirt",
+            "npm Hat",
+            "C++ Hoodie",
+            "Angular T-Shirt",
+            "React T-Shirt",
+            "JavaScript Hoodie",
+            "Node.js T-Shirt"
+          ],
+          "bsonType": "String"
+        }
+      ]
+    },
+    {
+      "name": "price",
+      "path": [
+        "price"
+      ],
+      "count": 16,
+      "type": "Int32",
+      "probability": 1,
+      "hasDuplicates": true,
+      "types": [
+        {
+          "name": "Int32",
+          "path": [
+            "price"
+          ],
+          "count": 16,
+          "probability": 1,
+          "unique": 4,
+          "hasDuplicates": true,
+          "values": [
+            39,
+            39,
+            19,
+            49,
+            39,
+            39,
+            39,
+            39,
+            39,
+            39,
+            29,
+            49,
+            39,
+            39,
+            49,
+            39
+          ],
+          "bsonType": "Int32"
+        }
+      ]
+    }
+  ]
+}

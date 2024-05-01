@@ -5,6 +5,9 @@ import pymongo
 from dotenv import load_dotenv
 from pymongo import MongoClient
 
+from wtforms import StringField, PasswordField
+from wtforms.validators import DataRequired
+
 
 def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
@@ -12,10 +15,11 @@ def get_python_version() -> str:
 
 def get_connection_string() -> str:
     load_dotenv()
+    template: str = os.environ.get('mongodb_connection_template')
     uid: str = os.environ.get('mongodb_uid')
     pwd: str = os.environ.get('mongodb_pwd')
-    # WARNING: need to add authSource=admin for other useful commands to work
-    return f'mongodb+srv://{uid}:{pwd}@pymongocluster.6sstkik.mongodb.net/?retryWrites=true&w=majority&appName=pymongoCluster&authSource=admin'
+
+    return f'mongodb+srv://{uid}:{pwd}@{template}'
 
 
 def get_mongodb_client() -> MongoClient:
@@ -63,6 +67,32 @@ def display_mongodb_collections():
         print(f'\t{collection=}')
     print('DEBUG: bottom of display_mongodb_collections')
 
+def create_schema():
+    client = get_mongodb_client()
+    # ['sample_restaurants']
+    db = client['sample_restaurants']
+    documents = db['restaurants'].find()
+
+    user_properties = {
+        # Example of structure:
+        # '_id': StringField(required=False),
+        # 'name': StringField(required=False),
+        # 'email': StringField(required=False),
+    }
+    for doc in documents:
+        for field_name, value in doc.items():
+            # Some smart recognition can be here
+            field_definition = StringField(required=False)
+
+            user_properties[field_name] = field_definition
+    print(f'{user_properties}')
+    '''
+    # Your new class for MongoEngine:
+    User = type("User", (Document,), user_properties)
+
+    users = User.objects(email__endswith='.com')
+    print(users)
+    '''
 
 def display_american_cuisine_restaurants():
     #from pymongo import MongoClient
@@ -98,9 +128,10 @@ def display_american_cuisine_restaurants():
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
-    verify_mongodb_connection_works()
-    display_mongodb_collections()
+    # verify_mongodb_connection_works()
+    # display_mongodb_collections()
     display_american_cuisine_restaurants()
+    create_schema()
     # get_mongodb_version()
     # HANGS: verify_mongodb_database()
     # FAILURES START HERE:
