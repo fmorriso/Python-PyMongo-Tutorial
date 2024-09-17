@@ -4,10 +4,20 @@
 * [PyMongo Tutorial](https://pymongo.readthedocs.io/en/stable/tutorial.html)
 * [MongoDB Atlas API Services](https://learn.mongodb.com/courses/mongodb-atlas-api-services)
 ##Tools Used
-* Python 3.12.3
-* PyMongo 4.7
-* PyCharm 2024.1
-* VSCode 1.88.1
+
+| Tool      |  Version |
+|:----------|---------:|
+| Python    |   3.12.6 |
+| VSCode    |   1.93.0 |
+| PyCharm   | 2024.2.1 |
+| Pymongo   |    4.8.0 |
+
+## Change History
+
+| Date       | Description                                                                        |
+|:-----------|:-----------------------------------------------------------------------------------|
+| 2024-04-15 | Initial creation                                                                   |
+| 2024-09-17 | Verify program works with python 3.12.16 and other new levels of related packages  |
 ##Installs
 * ```python -m pip install "pymongo[srv]"```
 ## What Mother (MongoDB and/or PyMongo) Never Told You But You need to know

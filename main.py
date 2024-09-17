@@ -15,6 +15,7 @@ def get_python_version() -> str:
 
 def get_connection_string() -> str:
     load_dotenv()
+
     template: str = os.environ.get('mongodb_connection_template')
     uid: str = os.environ.get('mongodb_uid')
     pwd: str = os.environ.get('mongodb_pwd')
@@ -23,7 +24,7 @@ def get_connection_string() -> str:
 
 
 def get_mongodb_client() -> MongoClient:
-    print(f'{get_connection_string()=}')
+    #print(f'{get_connection_string()=}')
     return MongoClient(get_connection_string())
 
 
@@ -33,14 +34,15 @@ def verify_mongodb_connection_works():
 
 
 def verify_mongodb_database():
+    print('DEBUG: top of verify_mongodb_database')
     client: MongoClient = get_mongodb_client()
     print(f'{client=}')
     db = client['user_shopping_list']
     print(f'{db=}')
-
-    # FAILS with bad auth error - not sure why: db = client.list_databases()
     for db_info in client.list_database_names():
-        print(db_info)
+        print(f'{db_info=}')
+
+    print('DEBUG: bottom of verify_mongodb_database')
 
 
 def get_pymongo_version() -> str:
@@ -63,9 +65,15 @@ def display_mongodb_collections():
     print(f'{db.name=}')
     # List all the collections in 'sample_mflix':
     collections = db.list_collection_names()
+    print(f'{type(collections)=}')
+    debug: bool = True
     for collection in collections:
+        if debug:
+            debug = False
+            print(f'{type(collection)=}')
         print(f'\t{collection=}')
     print('DEBUG: bottom of display_mongodb_collections')
+
 
 def create_schema():
     client = get_mongodb_client()
@@ -94,13 +102,11 @@ def create_schema():
     print(users)
     '''
 
+
 def display_american_cuisine_restaurants():
-    #from pymongo import MongoClient
-
-    # Requires the PyMongo package.
-    # https://api.mongodb.com/python/current
-
     client = get_mongodb_client()
+    # fetch a list of restaurants that specialize in American cuisine,
+    # sorted by restaurant name.
     results = client['sample_restaurants']['restaurants'].aggregate([
         {
             '$match': {
@@ -128,12 +134,13 @@ def display_american_cuisine_restaurants():
 
 if __name__ == '__main__':
     print(f"Python version: {get_python_version()}")
-    # verify_mongodb_connection_works()
-    # display_mongodb_collections()
+    verify_mongodb_connection_works()
+    display_mongodb_collections()
     display_american_cuisine_restaurants()
-    create_schema()
-    # get_mongodb_version()
-    # HANGS: verify_mongodb_database()
+    verify_mongodb_database()
+    # create_schema()
+    get_mongodb_version()
+
     # FAILURES START HERE:
     # client = get_mongodb_client()
     # try to get MongoDB version number at runtime
