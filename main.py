@@ -24,7 +24,7 @@ def get_connection_string() -> str:
 
 
 def get_mongodb_client() -> MongoClient:
-    #print(f'{get_connection_string()=}')
+    # print(f'{get_connection_string()=}')
     return MongoClient(get_connection_string())
 
 
@@ -132,8 +132,7 @@ def display_american_cuisine_restaurants():
         print(f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}")
 
 
-if __name__ == '__main__':
-    print(f"Python version: {get_python_version()}")
+def main():
     verify_mongodb_connection_works()
     display_mongodb_collections()
     display_american_cuisine_restaurants()
@@ -152,3 +151,8 @@ if __name__ == '__main__':
     # print(f'{get_pymongo_version()=}')
 
     print('DEBUG: end of program')
+
+
+if __name__ == '__main__':
+    print(f"Python version: {get_python_version()}")
+    main()
