@@ -8,9 +8,9 @@
 | Tool      |  Version |
 |:----------|---------:|
 | Python    |   3.12.7 |
-| VSCode    |   1.93.0 |
+| VSCode    |   1.94.0 |
 | PyCharm   | 2024.2.1 |
-| Pymongo   |    4.8.0 |
+| Pymongo   |   4.10.1 |
 
 ## Change History
 
@@ -19,12 +19,13 @@
 | 2024-04-15 | Initial creation                                                                 |
 | 2024-09-17 | Verify program works with python 3.12.6 and other new levels of related packages |
 | 2024-10-01 | Verify program works with python 3.12.7                                          |
+| 2024-10-04 | Verify program runs with PyMongo 4.10.1                                          |
 
 ## Installs
 * ```python -m pip install "pymongo[srv]"```
 ## What Mother (MongoDB and/or PyMongo) Never Told You But You need to know
 * WARNING: need to add ```authSource=admin``` to the Query String portion of the connection information in order for other useful commands to work:
-```python
+```text
     return f'mongodb+srv://frederickmorrison1953:{pwd}@pymongocluster.6sstkik.mongodb.net/?retryWrites=true&w=majority&appName=pymongoCluster&authSource=admin'
 ```
 
