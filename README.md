@@ -7,9 +7,9 @@
 
 | Tool      |  Version |
 |:----------|---------:|
-| Python    |   3.12.7 |
-| VSCode    |   1.94.0 |
-| PyCharm   | 2024.2.1 |
+| Python    |   3.13.0 |
+| VSCode    |   1.94.2 |
+| PyCharm   | 2024.2.3 |
 | Pymongo   |   4.10.1 |
 
 ## Change History
@@ -20,6 +20,8 @@
 | 2024-09-17 | Verify program works with python 3.12.6 and other new levels of related packages |
 | 2024-10-01 | Verify program works with python 3.12.7                                          |
 | 2024-10-04 | Verify program runs with PyMongo 4.10.1                                          |
+| 2024-10-20 | Verify program runs with Python 3.13.0                                           |
+
 
 ## Installs
 * ```python -m pip install "pymongo[srv]"```

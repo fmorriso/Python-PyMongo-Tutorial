@@ -20,7 +20,9 @@ def get_connection_string() -> str:
     uid: str = os.environ.get('mongodb_uid')
     pwd: str = os.environ.get('mongodb_pwd')
 
-    return f'mongodb+srv://{uid}:{pwd}@{template}'
+    conn_string = f'mongodb+srv://{uid}:{pwd}@{template}'
+    print(f'{conn_string=}')
+    return conn_string
 
 
 def get_mongodb_client() -> MongoClient:
