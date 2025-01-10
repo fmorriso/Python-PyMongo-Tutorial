@@ -39,8 +39,10 @@ def verify_mongodb_database():
     print('DEBUG: top of verify_mongodb_database')
     client: MongoClient = get_mongodb_client()
     print(f'{client=}')
-    db = client['user_shopping_list']
+    #print('Trying to look at a specific database')
+    db = client['sample_restaurants']
     print(f'{db=}')
+    print('looping through all client database names')
     for db_info in client.list_database_names():
         print(f'{db_info=}')
 
@@ -63,8 +65,10 @@ def get_mongodb_version() -> str:
 def display_mongodb_collections():
     print('DEBUG: top of display_mongodb_collections')
     client = get_mongodb_client()
-    db = client['sample_mflix']
-    print(f'{db.name=}')
+    # db = client['sample_mflix']
+    databases = client.list_database_names()
+    print(f'{databases=}')
+    # print(f'{db.name=}')
     # List all the collections in 'sample_mflix':
     collections = db.list_collection_names()
     print(f'{type(collections)=}')
@@ -136,8 +140,8 @@ def display_american_cuisine_restaurants():
 
 def main():
     verify_mongodb_connection_works()
-    display_mongodb_collections()
-    display_american_cuisine_restaurants()
+#FAILS as of 2025-01-09    display_mongodb_collections()
+#FAILS as of 2025-01-09    display_american_cuisine_restaurants()
     verify_mongodb_database()
     # create_schema()
     get_mongodb_version()
