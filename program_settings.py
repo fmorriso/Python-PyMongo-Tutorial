@@ -18,4 +18,4 @@ class ProgramSettings:
     def set_setting(key: str, value: str) -> None:
         load_dotenv(dotenv_path = ProgramSettings.ENV_PATH)
         os.environ[key] = value
-        set_key(ENV_PATH, key, value)
+        set_key(ProgramSettings.ENV_PATH, key, value)

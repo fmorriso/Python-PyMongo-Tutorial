@@ -2,11 +2,13 @@ import os
 import sys
 
 import pymongo
-from dotenv import load_dotenv
+
 from pymongo import MongoClient
 
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
+
+from program_settings import ProgramSettings
 
 
 def get_python_version() -> str:
@@ -14,11 +16,9 @@ def get_python_version() -> str:
 
 
 def get_connection_string() -> str:
-    load_dotenv()
-
-    template: str = os.environ.get('mongodb_connection_template')
-    uid: str = os.environ.get('mongodb_uid')
-    pwd: str = os.environ.get('mongodb_pwd')
+    template: str = ProgramSettings.get_setting('mongodb_connection_template')
+    uid: str = ProgramSettings.get_setting('mongodb_uid')
+    pwd: str = ProgramSettings.get_setting('mongodb_pwd')
 
     conn_string = f'mongodb+srv://{uid}:{pwd}@{template}'
     print(f'{conn_string=}')
@@ -39,7 +39,7 @@ def verify_mongodb_database():
     print('DEBUG: top of verify_mongodb_database')
     client: MongoClient = get_mongodb_client()
     print(f'{client=}')
-    #print('Trying to look at a specific database')
+    # print('Trying to look at a specific database')
     db = client['sample_restaurants']
     print(f'{db=}')
     print('looping through all client database names')
@@ -58,7 +58,7 @@ def get_mongodb_version() -> str:
     db = client['user_shopping_list']
     # FAILS: result = db.command('new Document("buildInfo', 1)
     result = db.command("dbstats")
-    print(f'{result=}')
+    print(f'db.command("dbstats") {result=}')
     return 'pass'
 
 
@@ -96,7 +96,7 @@ def create_schema():
     for doc in documents:
         for field_name, value in doc.items():
             # Some smart recognition can be here
-            field_definition = StringField(required=False)
+            field_definition = StringField(required = False)
 
             user_properties[field_name] = field_definition
     print(f'{user_properties}')
@@ -140,8 +140,8 @@ def display_american_cuisine_restaurants():
 
 def main():
     verify_mongodb_connection_works()
-#FAILS as of 2025-01-09    display_mongodb_collections()
-#FAILS as of 2025-01-09    display_american_cuisine_restaurants()
+    # FAILS as of 2025-01-09    display_mongodb_collections()
+    # FAILS as of 2025-01-09    display_american_cuisine_restaurants()
     verify_mongodb_database()
     # create_schema()
     get_mongodb_version()
