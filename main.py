@@ -56,10 +56,16 @@ def get_pymongo_version() -> str:
 def get_mongodb_version() -> str:
     client: MongoClient = get_mongodb_client()
     db = client['user_shopping_list']
-    # FAILS: result = db.command('new Document("buildInfo', 1)
-    result = db.command("dbstats")
-    print(f'db.command("dbstats") {result=}')
-    return 'pass'
+    print(f'{db.name=}')
+    # FAILS:  https://www.mongodb.com/docs/manual/reference/command/buildInfo/
+    # FAILS: If you meant to call the 'runCommand' method on a 'Database' object it is failing because no such method exists."
+    result = db.command( {'buildInfo': 1 } )
+    print(f'db.command("buildInfo") {result=}')
+    version: str = result.get('version')
+    print(f'{version=}')
+    #result = db.command("dbstats")
+    #print(f'db.command("dbstats") {result=}')
+    return version
 
 
 def display_mongodb_collections():

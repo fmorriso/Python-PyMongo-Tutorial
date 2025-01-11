@@ -11,17 +11,19 @@
 | VSCode  |   1.96.2 |
 | PyCharm | 2024.3.1 |
 | PyMongo |   4.10.1 |
+ | MongoDB Atlas | 8.0.4 |
 
 ## Change History
 
-| Date       | Description                                                                      |
-|:-----------|:---------------------------------------------------------------------------------|
-| 2024-04-15 | Initial creation                                                                 |
-| 2024-09-17 | Verify program works with python 3.12.6 and other new levels of related packages |
-| 2024-10-01 | Verify program works with python 3.12.7                                          |
-| 2024-10-04 | Verify program runs with PyMongo 4.10.1                                          |
-| 2024-10-20 | Verify program runs with Python 3.13.0                                           |
-| 2025-01-09 | Verify program runs with Python 3.13.1                                           |
+| Date       | Description                             |
+|:-----------|:----------------------------------------|
+| 2024-04-15 | Initial creation                        |
+| 2024-09-17 | Verify program works with python 3.12.6 |
+| 2024-10-01 | Verify program works with python 3.12.7 |
+| 2024-10-04 | Verify program runs with PyMongo 4.10.1 |
+| 2024-10-20 | Verify program runs with Python 3.13.0  |
+| 2025-01-09 | Verify program runs with Python 3.13.1  |
+| 2025-01-11 | Fix get_mongodb_version()               |
 
 
 ## Installs
