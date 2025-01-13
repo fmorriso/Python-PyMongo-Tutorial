@@ -56,15 +56,10 @@ def get_pymongo_version() -> str:
 def get_mongodb_version() -> str:
     client: MongoClient = get_mongodb_client()
     db = client['user_shopping_list']
-    print(f'{db.name=}')
-    # FAILS:  https://www.mongodb.com/docs/manual/reference/command/buildInfo/
-    # FAILS: If you meant to call the 'runCommand' method on a 'Database' object it is failing because no such method exists."
     result = db.command( {'buildInfo': 1 } )
-    print(f'db.command("buildInfo") {result=}')
+    # print(f'db.command("buildInfo") {result=}')
     version: str = result.get('version')
-    print(f'{version=}')
-    #result = db.command("dbstats")
-    #print(f'db.command("dbstats") {result=}')
+    # print(f'{version=}')
     return version
 
 
@@ -99,13 +94,14 @@ def create_schema():
         # 'name': StringField(required=False),
         # 'email': StringField(required=False),
     }
+    print(f'{user_properties=}')
+
     for doc in documents:
         for field_name, value in doc.items():
             # Some smart recognition can be here
-            field_definition = StringField(required = False)
-
+            field_definition = StringField()
             user_properties[field_name] = field_definition
-    print(f'{user_properties}')
+
     '''
     # Your new class for MongoEngine:
     User = type("User", (Document,), user_properties)
@@ -166,5 +162,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print(f"Python version: {get_python_version()}")
+    print(f'Python version: {get_python_version()}')
+    print(f'MongoDB Atlas version: {get_mongodb_version()}')
     main()
