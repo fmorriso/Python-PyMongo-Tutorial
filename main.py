@@ -68,17 +68,22 @@ def display_mongodb_collections():
     client = get_mongodb_client()
     # db = client['sample_mflix']
     databases = client.list_database_names()
-    print(f'{databases=}')
+    print(f'{databases = }')
     # print(f'{db.name=}')
     # List all the collections in 'sample_mflix':
+    for db_info in client.list_database_names():
+        print(f'{db_info = }')
+
+    """
     collections = db.list_collection_names()
-    print(f'{type(collections)=}')
+    print(f'{type(collections) = }')
     debug: bool = True
     for collection in collections:
         if debug:
             debug = False
-            print(f'{type(collection)=}')
-        print(f'\t{collection=}')
+            print(f'{type(collection) = }')
+        print(f'\t{collection = }')
+    """
     print('DEBUG: bottom of display_mongodb_collections')
 
 
@@ -157,7 +162,7 @@ def main():
     # version = client.command({'buildInfo': 1})['version']
     # print(f'{version=}')
     # print(f'{get_pymongo_version()=}')
-
+    display_mongodb_collections()
     print('DEBUG: end of program')
 
 

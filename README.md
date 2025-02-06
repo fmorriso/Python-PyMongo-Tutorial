@@ -5,13 +5,13 @@
 * [MongoDB Atlas API Services](https://learn.mongodb.com/courses/mongodb-atlas-api-services)
 ## Tools Used
 
-| Tool    |  Version |
-|:--------|---------:|
-| Python  |   3.13.1 |
-| VSCode  |   1.96.2 |
-| PyCharm | 2024.3.1 |
-| PyMongo |   4.10.1 |
- | MongoDB Atlas | 8.0.4 |
+| Tool          |  Version |
+|:--------------|---------:|
+| Python        |   3.13.1 |
+| VSCode        |   1.96.4 |
+| PyCharm       | 2024.3.2 |
+| PyMongo       |   4.10.1 |
+| MongoDB Atlas |    8.0.4 |
 
 ## Change History
 
