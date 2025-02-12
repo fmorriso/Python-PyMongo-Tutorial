@@ -1,16 +1,18 @@
 # python-pymongo-tutorial
+An example that closely follows the PyMongo Tutorial
 
-##References
+## References
 * [PyMongo Tutorial](https://pymongo.readthedocs.io/en/stable/tutorial.html)
 * [MongoDB Atlas API Services](https://learn.mongodb.com/courses/mongodb-atlas-api-services)
+
 ## Tools Used
 
 | Tool          |  Version |
 |:--------------|---------:|
-| Python        |   3.13.1 |
-| VSCode        |   1.96.4 |
+| Python        |   3.13.2 |
+| VSCode        |   1.97.0 |
 | PyCharm       | 2024.3.2 |
-| PyMongo       |   4.10.1 |
+| PyMongo       |   4.11.1 |
 | MongoDB Atlas |    8.0.4 |
 
 ## Change History
@@ -24,10 +26,12 @@
 | 2024-10-20 | Verify program runs with Python 3.13.0  |
 | 2025-01-09 | Verify program runs with Python 3.13.1  |
 | 2025-01-11 | Fix get_mongodb_version()               |
+| 2025-02-12 | upgrade to Python 3.13.2                |
 
 
 ## Installs
 * ```python -m pip install "pymongo[srv]"```
+* 
 ## What Mother (MongoDB and/or PyMongo) Never Told You But You need to know
 * WARNING: need to add ```authSource=admin``` to the Query String portion of the connection information in order for other useful commands to work:
 ```text
