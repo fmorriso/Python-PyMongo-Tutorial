@@ -16,9 +16,13 @@ def get_python_version() -> str:
 
 
 def get_connection_string() -> str:
-    template: str = ProgramSettings.get_setting('mongodb_connection_template')
-    uid: str = ProgramSettings.get_setting('mongodb_uid')
-    pwd: str = ProgramSettings.get_setting('mongodb_pwd')
+    """
+    Get a connection string for MongoDB using the key/values stored in the .env file.
+    :return: a string containing the connection string.
+    """
+    template: str = ProgramSettings.get_setting('MONGODB_CONNECTION_TEMPLATE')
+    uid: str = ProgramSettings.get_setting('MONGODB_UID')
+    pwd: str = ProgramSettings.get_setting('MONGODB_PWD')
 
     conn_string = f'mongodb+srv://{uid}:{pwd}@{template}'
     print(f'{conn_string=}')
@@ -26,8 +30,10 @@ def get_connection_string() -> str:
 
 
 def get_mongodb_client() -> MongoClient:
-    # print(f'{get_connection_string()=}')
-    return MongoClient(get_connection_string())
+    """get a client connection to my personal MongoDB Atlas cluster using my personal usrid and password"""
+    connection_string: str = get_connection_string()
+    connection: MongoClient = MongoClient(connection_string)
+    return connection
 
 
 def verify_mongodb_connection_works():

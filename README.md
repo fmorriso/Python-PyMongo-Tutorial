@@ -10,7 +10,7 @@ An example that closely follows the PyMongo Tutorial
 | Tool          |  Version |
 |:--------------|---------:|
 | Python        |   3.13.2 |
-| VSCode        |   1.97.0 |
+| VSCode        |   1.97.1 |
 | PyCharm       | 2024.3.2 |
 | PyMongo       |   4.11.1 |
 | MongoDB Atlas |    8.0.4 |
