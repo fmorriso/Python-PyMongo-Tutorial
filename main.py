@@ -1,14 +1,10 @@
-import os
 import sys
 from importlib.metadata import version
 
 import pymongo
-
 from pymongo import MongoClient
 from pymongo.synchronous.database import Database
-
-from wtforms import StringField, PasswordField
-from wtforms.validators import DataRequired
+from wtforms import StringField
 
 from program_settings import ProgramSettings
 
@@ -16,8 +12,10 @@ from program_settings import ProgramSettings
 def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
 
+
 def get_package_version(package_name: str) -> str:
-	return version(package_name)
+    return version(package_name)
+
 
 def get_connection_string() -> str:
     """
@@ -67,7 +65,7 @@ def get_mongodb_version() -> str:
     """get a string containing the version of the MongoDB database we're using."""
     client: MongoClient = get_mongodb_client()
     db: Database = client['user_shopping_list']
-    result: dict = db.command({'buildInfo': 1 })
+    result: dict = db.command({'buildInfo': 1})
     key = 'version'
     version: str = 'unknown'
     if key in result.keys():
