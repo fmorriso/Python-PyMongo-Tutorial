@@ -6,8 +6,10 @@ from pymongo import MongoClient
 from pymongo.synchronous.database import Database
 from wtforms import StringField
 
+from logging_utility import LoggingUtility
 from program_settings import ProgramSettings
 
+logger = LoggingUtility.start_logging()
 
 def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
@@ -27,7 +29,9 @@ def get_connection_string() -> str:
     pwd: str = ProgramSettings.get_setting('MONGODB_PWD')
 
     conn_string = f'mongodb+srv://{uid}:{pwd}@{template}'
-    print(f'{conn_string=}')
+    msg = f'{conn_string=}'
+    logger.info(msg)
+    logger.debug(msg)
     return conn_string
 
 
@@ -52,9 +56,11 @@ def verify_mongodb_database():
     print(f'{db=}')
     print('looping through all client database names')
     for db_info in client.list_database_names():
-        print(f'{db_info=}')
+        msg = f'{db_info=}'
+        logger.info(msg)
+        logger.debug(msg)
 
-    print('DEBUG: bottom of verify_mongodb_database')
+    logger.debug('DEBUG: bottom of verify_mongodb_database')
 
 
 def get_pymongo_version() -> str:
@@ -70,7 +76,7 @@ def get_mongodb_version() -> str:
     version: str = 'unknown'
     if key in result.keys():
         version = result.get(key)
-    print(f'MongoDB {version=}')
+    # print(f'MongoDB {version=}')
     return version
 
 
@@ -79,11 +85,16 @@ def display_mongodb_collections():
     client = get_mongodb_client()
     # db = client['sample_mflix']
     databases = client.list_database_names()
-    print(f'{databases = }')
+    msg = f'{databases = }'
+    logger.info(msg)
+    logger.debug(msg)
+
     # print(f'{db.name=}')
     # List all the collections in 'sample_mflix':
     for db_info in client.list_database_names():
-        print(f'{db_info = }')
+        msg = f'{db_info = }'
+        logger.info(msg)
+        logger.debug(msg)
 
     """
     collections = db.list_collection_names()
@@ -153,7 +164,8 @@ def display_american_cuisine_restaurants():
     # examine the results
     for result in results:
         # print(r)
-        print(f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}")
+        msg = f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}"
+        logger.debug(msg)
 
 
 def main():
@@ -174,12 +186,25 @@ def main():
     # print(f'{version=}')
     # print(f'{get_pymongo_version()=}')
     display_mongodb_collections()
-    print('DEBUG: end of program')
+    logger.debug('DEBUG: end of program')
 
 
 if __name__ == '__main__':
-    print(f'Python version: {get_python_version()}')
-    print(f'PyMongo version: {get_package_version("PyMongo")}')
-    print(f'MongoDB Atlas version: {get_mongodb_version()}')
+    msg = f'Python version: {get_python_version()}'
+    logger.info(msg)
+    logger.debug(msg)
+
+    msg = f'loguru version: {get_package_version("loguru")}'
+    logger.info(msg)
+    logger.debug(msg)
+
+
+    msg = f'PyMongo version: {get_package_version("PyMongo")}'
+    logger.info(msg)
+    logger.debug(msg)
+
+    msg = f'MongoDB Atlas version: {get_mongodb_version()}'
+    logger.info(msg)
+    logger.debug(msg)
 
     main()
