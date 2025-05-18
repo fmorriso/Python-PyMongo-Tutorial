@@ -1,9 +1,11 @@
 import os
 import sys
+from importlib.metadata import version
 
 import pymongo
 
 from pymongo import MongoClient
+from pymongo.synchronous.database import Database
 
 from wtforms import StringField, PasswordField
 from wtforms.validators import DataRequired
@@ -14,6 +16,8 @@ from program_settings import ProgramSettings
 def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
 
+def get_package_version(package_name: str) -> str:
+	return version(package_name)
 
 def get_connection_string() -> str:
     """
@@ -30,7 +34,7 @@ def get_connection_string() -> str:
 
 
 def get_mongodb_client() -> MongoClient:
-    """get a client connection to my personal MongoDB Atlas cluster using my personal usrid and password"""
+    """get a client connection to my personal MongoDB Atlas cluster using my personal userid and password"""
     connection_string: str = get_connection_string()
     connection: MongoClient = MongoClient(connection_string)
     return connection
@@ -60,12 +64,15 @@ def get_pymongo_version() -> str:
 
 
 def get_mongodb_version() -> str:
+    """get a string containing the version of the MongoDB database we're using."""
     client: MongoClient = get_mongodb_client()
-    db = client['user_shopping_list']
-    result = db.command( {'buildInfo': 1 } )
-    # print(f'db.command("buildInfo") {result=}')
-    version: str = result.get('version')
-    # print(f'{version=}')
+    db: Database = client['user_shopping_list']
+    result: dict = db.command({'buildInfo': 1 })
+    key = 'version'
+    version: str = 'unknown'
+    if key in result.keys():
+        version = result.get(key)
+    print(f'MongoDB {version=}')
     return version
 
 
@@ -174,5 +181,7 @@ def main():
 
 if __name__ == '__main__':
     print(f'Python version: {get_python_version()}')
+    print(f'PyMongo version: {get_package_version("PyMongo")}')
     print(f'MongoDB Atlas version: {get_mongodb_version()}')
+
     main()
