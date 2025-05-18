@@ -10,8 +10,9 @@ An example that closely follows the PyMongo Tutorial
 | Tool          |  Version |
 |:--------------|---------:|
 | Python        |   3.13.3 |
-| PyMongo       |   4.13.0 |
+| loguru        |    0.7.3 |
 | MongoDB Atlas |    8.0.9 |
+| PyMongo       |   4.13.0 |
 | VSCode        |  1.100.2 |
 | PyCharm       | 2025.1.1 |
 
@@ -28,6 +29,7 @@ An example that closely follows the PyMongo Tutorial
 | 2025-01-11 | Fix get_mongodb_version()                     |
 | 2025-02-12 | upgrade to Python 3.13.2                      |
 | 2025-05-17 | add requirements.txt & fix MongoDb connection |
+| 2025-05-18 | add logging                                   |
 
 
 ## Installs
