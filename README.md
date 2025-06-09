@@ -30,6 +30,7 @@ An example that closely follows the PyMongo Tutorial
 | 2025-02-12 | upgrade to Python 3.13.2                      |
 | 2025-05-17 | add requirements.txt & fix MongoDb connection |
 | 2025-05-18 | add logging                                   |
+| 2025-06-09 | streamline Logging                            |
 
 
 ## Installs

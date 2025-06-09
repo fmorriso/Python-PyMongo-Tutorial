@@ -6,10 +6,9 @@ from pymongo import MongoClient
 from pymongo.synchronous.database import Database
 from wtforms import StringField
 
-from logging_utility import LoggingUtility
+from logging_utility import LoggingUtility as LU
 from program_settings import ProgramSettings
 
-logger = LoggingUtility.start_logging()
 
 def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
@@ -30,8 +29,7 @@ def get_connection_string() -> str:
 
     conn_string = f'mongodb+srv://{uid}:{pwd}@{template}'
     msg = f'{conn_string=}'
-    logger.info(msg)
-    logger.debug(msg)
+    LU.debug(msg)
     return conn_string
 
 
@@ -57,10 +55,10 @@ def verify_mongodb_database():
     print('looping through all client database names')
     for db_info in client.list_database_names():
         msg = f'{db_info=}'
-        logger.info(msg)
-        logger.debug(msg)
+        LU.info(msg)
+        LU.debug(msg)
 
-    logger.debug('DEBUG: bottom of verify_mongodb_database')
+    LU.debug('DEBUG: bottom of verify_mongodb_database')
 
 
 def get_pymongo_version() -> str:
@@ -86,15 +84,15 @@ def display_mongodb_collections():
     # db = client['sample_mflix']
     databases = client.list_database_names()
     msg = f'{databases = }'
-    logger.info(msg)
-    logger.debug(msg)
+    LU.info(msg)
+    LU.debug(msg)
 
     # print(f'{db.name=}')
     # List all the collections in 'sample_mflix':
     for db_info in client.list_database_names():
         msg = f'{db_info = }'
-        logger.info(msg)
-        logger.debug(msg)
+        LU.info(msg)
+        LU.debug(msg)
 
     """
     collections = db.list_collection_names()
@@ -165,7 +163,7 @@ def display_american_cuisine_restaurants():
     for result in results:
         # print(r)
         msg = f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}"
-        logger.debug(msg)
+        LU.debug(msg)
 
 
 def main():
@@ -186,25 +184,22 @@ def main():
     # print(f'{version=}')
     # print(f'{get_pymongo_version()=}')
     display_mongodb_collections()
-    logger.debug('DEBUG: end of program')
+    LU.debug('DEBUG: end of program')
 
 
 if __name__ == '__main__':
+    LU.start_logging()
+
     msg = f'Python version: {get_python_version()}'
-    logger.info(msg)
-    logger.debug(msg)
+    LU.log_info_and_debug(msg)
 
     msg = f'loguru version: {get_package_version("loguru")}'
-    logger.info(msg)
-    logger.debug(msg)
-
+    LU.log_info_and_debug(msg)
 
     msg = f'PyMongo version: {get_package_version("PyMongo")}'
-    logger.info(msg)
-    logger.debug(msg)
+    LU.log_info_and_debug(msg)
 
     msg = f'MongoDB Atlas version: {get_mongodb_version()}'
-    logger.info(msg)
-    logger.debug(msg)
+    LU.log_info_and_debug(msg)
 
     main()
