@@ -13,7 +13,7 @@ An example that closely follows the PyMongo Tutorial
 | loguru        |    0.7.3 |
 | MongoDB Atlas |    8.0.9 |
 | PyMongo       |   4.13.0 |
-| VSCode        |  1.100.2 |
+| VSCode        |  1.100.3 |
 | PyCharm       | 2025.1.1 |
 
 ## Change History
