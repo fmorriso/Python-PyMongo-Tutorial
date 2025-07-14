@@ -7,30 +7,31 @@ An example that closely follows the PyMongo Tutorial
 
 ## Tools Used
 
-| Tool          |  Version |
-|:--------------|---------:|
-| Python        |   3.13.3 |
-| loguru        |    0.7.3 |
-| MongoDB Atlas |    8.0.9 |
-| PyMongo       |   4.13.0 |
-| VSCode        |  1.100.3 |
-| PyCharm       | 2025.1.1 |
+| Tool          |    Version |
+|:--------------|-----------:|
+| Python        |     3.13.5 |
+| loguru        |      0.7.3 |
+| MongoDB Atlas |     8.0.11 |
+| PyMongo       |     4.13.2 |
+| PyCharm       | 2025.1.3.1 |
+| VSCode        |    1.102.0 |
 
 ## Change History
 
-| Date       | Description                                   |
-|:-----------|:----------------------------------------------|
-| 2024-04-15 | Initial creation                              |
-| 2024-09-17 | Verify program works with python 3.12.6       |
-| 2024-10-01 | Verify program works with python 3.12.7       |
-| 2024-10-04 | Verify program runs with PyMongo 4.10.1       |
-| 2024-10-20 | Verify program runs with Python 3.13.0        |
-| 2025-01-09 | Verify program runs with Python 3.13.1        |
-| 2025-01-11 | Fix get_mongodb_version()                     |
-| 2025-02-12 | upgrade to Python 3.13.2                      |
-| 2025-05-17 | add requirements.txt & fix MongoDb connection |
-| 2025-05-18 | add logging                                   |
-| 2025-06-09 | streamline Logging                            |
+| Date       | Description                                              |
+|:-----------|:---------------------------------------------------------|
+| 2024-04-15 | Initial creation                                         |
+| 2024-09-17 | Verify program works with python 3.12.6                  |
+| 2024-10-01 | Verify program works with python 3.12.7                  |
+| 2024-10-04 | Verify program runs with PyMongo 4.10.1                  |
+| 2024-10-20 | Verify program runs with Python 3.13.0                   |
+| 2025-01-09 | Verify program runs with Python 3.13.1                   |
+| 2025-01-11 | Fix get_mongodb_version()                                |
+| 2025-02-12 | upgrade to Python 3.13.2                                 |
+| 2025-05-17 | add requirements.txt & fix MongoDb connection            |
+| 2025-05-18 | add logging                                              |
+| 2025-06-09 | streamline Logging                                       |
+| 2025-07-14 | use requirements.txt to show package version information |
 
 
 ## Installs

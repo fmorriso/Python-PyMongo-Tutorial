@@ -165,6 +165,23 @@ def display_american_cuisine_restaurants():
         msg = f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}"
         LU.debug(msg)
 
+def get_required_package_names() -> list[str]:
+    """
+    read the requirements.txt file and return a sorted list of package names.
+    :return: sorted list of package names
+    :rtype: list[str
+    """
+    packages: list[str] = []
+    with open('requirements.txt') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue  # skip blank lines and comments
+            package = line.split('~')[0].strip()  # works for ~=, >=, ==, etc.
+            packages.append(package)
+
+    packages.sort(key=str.lower)
+    return packages
 
 def main():
     verify_mongodb_connection_works()
@@ -192,12 +209,16 @@ if __name__ == '__main__':
 
     msg = f'Python version: {get_python_version()}'
     LU.log_info_and_debug(msg)
+    print(f'Python version: {get_python_version()}')
 
-    msg = f'loguru version: {get_package_version("loguru")}'
-    LU.log_info_and_debug(msg)
+    package_names = get_required_package_names()
 
-    msg = f'PyMongo version: {get_package_version("PyMongo")}'
-    LU.log_info_and_debug(msg)
+    for pkg in package_names:
+        package_name = f'{pkg}'.ljust(12)
+        try:
+            LU.log_info_and_debug(f'{package_name}{get_package_version(pkg)}')
+        except Exception as e:
+            print(e)
 
     msg = f'MongoDB Atlas version: {get_mongodb_version()}'
     LU.log_info_and_debug(msg)
