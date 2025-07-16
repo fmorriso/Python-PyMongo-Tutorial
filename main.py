@@ -28,8 +28,8 @@ def get_connection_string() -> str:
     pwd: str = ProgramSettings.get_setting('MONGODB_PWD')
 
     conn_string = f'mongodb+srv://{uid}:{pwd}@{template}'
-    msg = f'{conn_string=}'
-    LU.debug(msg)
+    # msg = f'{conn_string=}'
+    # LU.debug(msg)
     return conn_string
 
 
@@ -166,6 +166,7 @@ def display_american_cuisine_restaurants():
         msg = f"\nName: {result['name']}\n\tCuisine: {result['cuisine']}\n\tBorough: {result['borough']}\n\tZip: {result['address']['zipcode']}"
         LU.log_info_and_debug(msg)
 
+
 def get_required_package_names() -> list[str]:
     """
     read the requirements.txt file and return a sorted list of package names.
@@ -181,25 +182,15 @@ def get_required_package_names() -> list[str]:
             package = line.split('~')[0].strip()  # works for ~=, >=, ==, etc.
             packages.append(package)
 
-    packages.sort(key=str.lower)
+    packages.sort(key = str.lower)
     return packages
+
 
 def main():
     verify_mongodb_connection_works()
     verify_mongodb_database()
     display_american_cuisine_restaurants()
     # create_schema()
-
-
-    # FAILURES START HERE:
-    # client = get_mongodb_client()
-    # try to get MongoDB version number at runtime
-    # FAILS print(f'{client.server_info()=}')
-    # FAILS: print(f'{client.version()=}')
-    # FAILS: version = client.server_info()["version"]
-    # version = client.command({'buildInfo': 1})['version']
-    # print(f'{version=}')
-    # print(f'{get_pymongo_version()=}')
     display_mongodb_collections()
     LU.debug('DEBUG: end of program')
 
@@ -209,7 +200,6 @@ if __name__ == '__main__':
 
     msg = f'Python version: {get_python_version()}'
     LU.log_info_and_debug(msg)
-    print(f'Python version: {get_python_version()}')
 
     package_names = get_required_package_names()
 
