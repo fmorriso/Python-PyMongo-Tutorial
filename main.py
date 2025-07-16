@@ -137,6 +137,7 @@ def create_schema():
 
 
 def display_american_cuisine_restaurants():
+    LU.log_info_and_debug('top of display_american_cuisine_restaurants')
     client = get_mongodb_client()
     # fetch a list of restaurants that specialize in American cuisine,
     # sorted by restaurant name.
@@ -185,11 +186,10 @@ def get_required_package_names() -> list[str]:
 
 def main():
     verify_mongodb_connection_works()
-    # FAILS as of 2025-01-09    display_mongodb_collections()
-    # FAILS as of 2025-01-09    display_american_cuisine_restaurants()
     verify_mongodb_database()
+    display_american_cuisine_restaurants()
     # create_schema()
-    get_mongodb_version()
+
 
     # FAILURES START HERE:
     # client = get_mongodb_client()

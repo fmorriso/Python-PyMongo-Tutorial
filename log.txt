@@ -43,3 +43,345 @@
 2025-06-09T11:41:50.073789-0600 - logging_utility - INFO - info - db_info = 'local'
 2025-06-09T11:41:50.073830-0600 - logging_utility - DEBUG - debug - db_info = 'local'
 2025-06-09T11:41:50.074125-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-14T05:56:20.620071-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-14T05:56:20.620382-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-14T05:56:20.622599-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-14T05:56:20.622672-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-14T05:56:20.623852-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-14T05:56:20.623919-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-14T05:56:20.625479-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-14T05:56:21.118957-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-14T05:56:21.119211-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-14T05:56:21.120946-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-14T05:56:21.149399-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-14T05:56:21.369267-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-14T05:56:21.369402-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-14T05:56:21.369472-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-14T05:56:21.369508-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-14T05:56:21.369546-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-14T05:56:21.369576-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-14T05:56:21.369612-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-14T05:56:21.369640-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-14T05:56:21.369674-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-14T05:56:21.369701-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-14T05:56:21.369734-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-14T05:56:21.369761-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-14T05:56:21.369792-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-14T05:56:21.369818-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-14T05:56:21.369848-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-14T05:56:21.371232-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-14T05:56:21.586792-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-14T05:56:21.818899-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-14T05:56:21.819060-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-14T05:56:21.838724-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-14T05:56:21.838822-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-14T05:56:21.838897-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-14T05:56:21.838942-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-14T05:56:21.838995-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-14T05:56:21.839035-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-14T05:56:21.839077-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-14T05:56:21.839109-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-14T05:56:21.839147-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-14T05:56:21.839179-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-14T05:56:21.839217-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-14T05:56:21.839250-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-14T05:56:21.839310-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-14T05:56:21.839341-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-14T05:56:21.839571-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-16T06:16:11.470825-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:16:11.471421-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:16:11.473495-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:16:11.473569-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:16:11.474825-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:16:11.474892-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:16:11.476306-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:12.321415-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:16:12.321628-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:16:12.323701-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:12.419833-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:12.717480-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-16T06:16:12.717615-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-16T06:16:12.717676-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-16T06:16:12.717709-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-16T06:16:12.717743-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-16T06:16:12.717769-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-16T06:16:12.717801-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-16T06:16:12.717892-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-16T06:16:12.717934-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-16T06:16:12.717960-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-16T06:16:12.717992-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-16T06:16:12.718018-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-16T06:16:12.718048-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-16T06:16:12.718073-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-16T06:16:12.718102-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-16T06:16:12.719382-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:12.974633-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:13.222196-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:16:13.222340-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:16:13.242301-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-16T06:16:13.242439-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-16T06:16:13.242543-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-16T06:16:13.242608-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-16T06:16:13.242678-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-16T06:16:13.242731-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-16T06:16:13.242787-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-16T06:16:13.242827-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-16T06:16:13.242932-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-16T06:16:13.242994-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-16T06:16:13.243049-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-16T06:16:13.243089-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-16T06:16:13.243138-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-16T06:16:13.243177-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-16T06:16:13.243445-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-16T06:16:30.029697-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:16:30.029847-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:16:30.031889-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:16:30.031958-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:16:30.033122-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:16:30.033188-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:16:30.034519-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:30.610247-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:16:30.610432-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:16:30.611778-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:30.716094-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:30.938598-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:31.284993-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-16T06:16:31.285200-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-16T06:16:31.285329-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-16T06:16:31.285412-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-16T06:16:31.285532-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-16T06:16:31.285602-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-16T06:16:31.285676-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-16T06:16:31.285733-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-16T06:16:31.285804-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-16T06:16:31.285863-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-16T06:16:31.285933-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-16T06:16:31.285992-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-16T06:16:31.286063-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-16T06:16:31.286109-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-16T06:16:31.286160-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-16T06:16:31.287993-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:31.535004-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:16:31.795457-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:16:31.795649-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:16:31.815679-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-16T06:16:31.815823-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-16T06:16:31.815882-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-16T06:16:31.815913-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-16T06:16:31.815948-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-16T06:16:31.815974-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-16T06:16:31.816004-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-16T06:16:31.816028-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-16T06:16:31.816056-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-16T06:16:31.816078-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-16T06:16:31.816106-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-16T06:16:31.816129-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-16T06:16:31.816159-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-16T06:16:31.816183-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-16T06:16:31.816397-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-16T06:17:16.124428-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:17:16.124592-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:17:16.126304-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:17:16.126365-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:17:16.127355-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:17:16.127417-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:17:16.128496-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:16.688531-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:17:16.688749-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:17:16.690458-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:16.849969-0600 - logging_utility - INFO - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:17:16.850116-0600 - logging_utility - DEBUG - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:17:16.851325-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:17.138281-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:17.392413-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-16T06:17:17.392566-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-16T06:17:17.392641-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-16T06:17:17.392679-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-16T06:17:17.392717-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-16T06:17:17.392801-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-16T06:17:17.392842-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-16T06:17:17.392867-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-16T06:17:17.392900-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-16T06:17:17.392927-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-16T06:17:17.392957-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-16T06:17:17.392983-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-16T06:17:17.393015-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-16T06:17:17.393041-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-16T06:17:17.393071-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-16T06:17:17.394435-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:17.766126-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:18.075764-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:17:18.075952-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:17:18.096251-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-16T06:17:18.096447-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-16T06:17:18.096542-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-16T06:17:18.096593-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-16T06:17:18.096650-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-16T06:17:18.096692-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-16T06:17:18.096745-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-16T06:17:18.096785-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-16T06:17:18.096833-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-16T06:17:18.096881-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-16T06:17:18.096931-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-16T06:17:18.096969-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-16T06:17:18.097014-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-16T06:17:18.097050-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-16T06:17:18.097343-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-16T06:17:53.422370-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:17:53.423024-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:17:53.458101-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:17:53.458324-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:17:53.461536-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:17:53.461662-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:17:53.470174-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:17:54.768185-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:17:54.768465-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:17:54.777251-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:18:05.721270-0600 - logging_utility - INFO - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:18:05.721987-0600 - logging_utility - DEBUG - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:18:12.612819-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:19.555172-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:19:19.555411-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:19:19.557813-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:19:19.557929-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:19:19.559394-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:19:19.559466-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:19:19.560746-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:20.099762-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:19:20.099957-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:19:20.101124-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:20.206315-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:20.518623-0600 - logging_utility - INFO - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:19:20.518837-0600 - logging_utility - DEBUG - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:19:20.520557-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:20.787211-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:21.039031-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-16T06:19:21.039199-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-16T06:19:21.039266-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-16T06:19:21.039302-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-16T06:19:21.039339-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-16T06:19:21.039368-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-16T06:19:21.039402-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-16T06:19:21.039429-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-16T06:19:21.039460-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-16T06:19:21.039485-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-16T06:19:21.039517-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-16T06:19:21.039542-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-16T06:19:21.039575-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-16T06:19:21.039601-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-16T06:19:21.039630-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-16T06:19:21.041160-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:19:21.299695-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:19:21.299862-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:19:21.319247-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-16T06:19:21.319404-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-16T06:19:21.319471-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-16T06:19:21.319505-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-16T06:19:21.319542-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-16T06:19:21.319571-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-16T06:19:21.319605-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-16T06:19:21.319633-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-16T06:19:21.319664-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-16T06:19:21.319756-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-16T06:19:21.319798-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-16T06:19:21.319826-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-16T06:19:21.319857-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-16T06:19:21.319883-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-16T06:19:21.320186-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-16T06:20:26.288204-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:20:26.288365-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:20:26.290147-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:20:26.290214-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:20:26.291423-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:20:26.291520-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:20:26.292850-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:20:26.840210-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:20:26.840373-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:20:26.841615-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:20:26.915339-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:20:27.204045-0600 - logging_utility - INFO - log_info_and_debug - MongoDB version: 8.0.11
+2025-07-16T06:20:27.204264-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB version: 8.0.11
+2025-07-16T06:20:27.204398-0600 - logging_utility - INFO - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:20:27.204471-0600 - logging_utility - DEBUG - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:20:27.206282-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:20:27.460737-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:20:27.849391-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-16T06:20:27.849683-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-16T06:20:27.849875-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-16T06:20:27.849958-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-16T06:20:27.850043-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-16T06:20:27.850105-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-16T06:20:27.850177-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-16T06:20:27.850234-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-16T06:20:27.850274-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-16T06:20:27.850308-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-16T06:20:27.850349-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-16T06:20:27.850381-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-16T06:20:27.850421-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-16T06:20:27.850452-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-16T06:20:27.850557-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-16T06:20:27.851912-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:20:28.087770-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:20:28.087933-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:20:28.108778-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-16T06:20:28.109049-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-16T06:20:28.109168-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-16T06:20:28.109256-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-16T06:20:28.109331-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-16T06:20:28.109377-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-16T06:20:28.109433-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-16T06:20:28.109475-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-16T06:20:28.109527-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-16T06:20:28.109662-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-16T06:20:28.109719-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-16T06:20:28.109762-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-16T06:20:28.109817-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-16T06:20:28.109857-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-16T06:20:28.110267-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
+2025-07-16T06:21:11.563823-0600 - logging_utility - INFO - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:21:11.563970-0600 - logging_utility - DEBUG - log_info_and_debug - Python version: 3.13.5
+2025-07-16T06:21:11.565767-0600 - logging_utility - INFO - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:21:11.565836-0600 - logging_utility - DEBUG - log_info_and_debug - loguru      0.7.3
+2025-07-16T06:21:11.567007-0600 - logging_utility - INFO - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:21:11.567071-0600 - logging_utility - DEBUG - log_info_and_debug - pymongo     4.13.2
+2025-07-16T06:21:11.568332-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:21:12.055134-0600 - logging_utility - INFO - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:21:12.055289-0600 - logging_utility - DEBUG - log_info_and_debug - MongoDB Atlas version: 8.0.11
+2025-07-16T06:21:12.056493-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:21:12.097912-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:21:12.481895-0600 - logging_utility - INFO - info - db_info='narwhal_database'
+2025-07-16T06:21:12.482093-0600 - logging_utility - DEBUG - debug - db_info='narwhal_database'
+2025-07-16T06:21:12.482207-0600 - logging_utility - INFO - info - db_info='sample_analytics'
+2025-07-16T06:21:12.482275-0600 - logging_utility - DEBUG - debug - db_info='sample_analytics'
+2025-07-16T06:21:12.482345-0600 - logging_utility - INFO - info - db_info='sample_geospatial'
+2025-07-16T06:21:12.482485-0600 - logging_utility - DEBUG - debug - db_info='sample_geospatial'
+2025-07-16T06:21:12.482567-0600 - logging_utility - INFO - info - db_info='sample_supplies'
+2025-07-16T06:21:12.482615-0600 - logging_utility - DEBUG - debug - db_info='sample_supplies'
+2025-07-16T06:21:12.482672-0600 - logging_utility - INFO - info - db_info='sample_training'
+2025-07-16T06:21:12.482706-0600 - logging_utility - DEBUG - debug - db_info='sample_training'
+2025-07-16T06:21:12.482748-0600 - logging_utility - INFO - info - db_info='admin'
+2025-07-16T06:21:12.482783-0600 - logging_utility - DEBUG - debug - db_info='admin'
+2025-07-16T06:21:12.482824-0600 - logging_utility - INFO - info - db_info='local'
+2025-07-16T06:21:12.482858-0600 - logging_utility - DEBUG - debug - db_info='local'
+2025-07-16T06:21:12.482899-0600 - logging_utility - DEBUG - debug - DEBUG: bottom of verify_mongodb_database
+2025-07-16T06:21:12.483119-0600 - logging_utility - INFO - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:21:12.483187-0600 - logging_utility - DEBUG - log_info_and_debug - top of display_american_cuisine_restaurants
+2025-07-16T06:21:12.484387-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:21:12.812856-0600 - logging_utility - DEBUG - debug - conn_string='mongodb+srv://superuser:Ha9LFgShxPo7@fpm-learning-cluster-01.bmk1kup.mongodb.net/?retryWrites=true&w=majority&authSource=admin'
+2025-07-16T06:21:13.072450-0600 - logging_utility - INFO - info - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:21:13.072642-0600 - logging_utility - DEBUG - debug - databases = ['narwhal_database', 'sample_analytics', 'sample_geospatial', 'sample_supplies', 'sample_training', 'admin', 'local']
+2025-07-16T06:21:13.092694-0600 - logging_utility - INFO - info - db_info = 'narwhal_database'
+2025-07-16T06:21:13.092839-0600 - logging_utility - DEBUG - debug - db_info = 'narwhal_database'
+2025-07-16T06:21:13.092947-0600 - logging_utility - INFO - info - db_info = 'sample_analytics'
+2025-07-16T06:21:13.093017-0600 - logging_utility - DEBUG - debug - db_info = 'sample_analytics'
+2025-07-16T06:21:13.093121-0600 - logging_utility - INFO - info - db_info = 'sample_geospatial'
+2025-07-16T06:21:13.093184-0600 - logging_utility - DEBUG - debug - db_info = 'sample_geospatial'
+2025-07-16T06:21:13.093255-0600 - logging_utility - INFO - info - db_info = 'sample_supplies'
+2025-07-16T06:21:13.093312-0600 - logging_utility - DEBUG - debug - db_info = 'sample_supplies'
+2025-07-16T06:21:13.093381-0600 - logging_utility - INFO - info - db_info = 'sample_training'
+2025-07-16T06:21:13.093438-0600 - logging_utility - DEBUG - debug - db_info = 'sample_training'
+2025-07-16T06:21:13.093506-0600 - logging_utility - INFO - info - db_info = 'admin'
+2025-07-16T06:21:13.093562-0600 - logging_utility - DEBUG - debug - db_info = 'admin'
+2025-07-16T06:21:13.093631-0600 - logging_utility - INFO - info - db_info = 'local'
+2025-07-16T06:21:13.093687-0600 - logging_utility - DEBUG - debug - db_info = 'local'
+2025-07-16T06:21:13.093989-0600 - logging_utility - DEBUG - debug - DEBUG: end of program
