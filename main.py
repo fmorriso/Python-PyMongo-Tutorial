@@ -163,8 +163,8 @@ def display_american_cuisine_restaurants():
     # examine the results
     for result in results:
         # print(r)
-        msg = f"{result['name']=}\n\t{result['cuisine']=}\n\t{result['borough']=}\n\t{result['address']['zipcode']=}"
-        LU.debug(msg)
+        msg = f"\nName: {result['name']}\n\tCuisine: {result['cuisine']}\n\tBorough: {result['borough']}\n\tZip: {result['address']['zipcode']}"
+        LU.log_info_and_debug(msg)
 
 def get_required_package_names() -> list[str]:
     """
