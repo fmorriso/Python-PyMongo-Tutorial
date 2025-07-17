@@ -238,7 +238,7 @@ def main():
 
 
 if __name__ == '__main__':
-    LU.start_logging()
+    LU.start_logging('log.txt')
 
     msg = f'Python version: {get_python_version()}'
     LU.log_info_and_debug(msg)
@@ -246,7 +246,7 @@ if __name__ == '__main__':
     package_names = get_required_package_names()
 
     for pkg in package_names:
-        package_name = f'{pkg}'.ljust(12)
+        package_name = f'{pkg}'.ljust(16)
         try:
             LU.log_info_and_debug(f'{package_name}{get_package_version(pkg)}')
         except Exception as e:
