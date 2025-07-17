@@ -1,11 +1,16 @@
 import sys
+from collections import defaultdict
 from importlib.metadata import version
 
+#
 import pymongo
 from pymongo import MongoClient
 from pymongo.synchronous.database import Database
+#
+from shapely.geometry import shape, Point
 from wtforms import StringField
 
+#
 from logging_utility import LoggingUtility as LU
 from program_settings import ProgramSettings
 
@@ -42,17 +47,17 @@ def get_mongodb_client() -> MongoClient:
 
 def verify_mongodb_connection_works():
     client: MongoClient = get_mongodb_client()
-    print(f'{client=}')
+    LU.debug(f'{client=}')
 
 
 def verify_mongodb_database():
-    print('DEBUG: top of verify_mongodb_database')
+    LU.debug('top of verify_mongodb_database')
     client: MongoClient = get_mongodb_client()
-    print(f'{client=}')
+    LU.debug(f'{client=}')
     # print('Trying to look at a specific database')
     db = client['sample_restaurants']
-    print(f'{db=}')
-    print('looping through all client database names')
+    LU.debug(f'{db=}')
+    LU.debug('looping through all client database names')
     for db_info in client.list_database_names():
         msg = f'{db_info=}'
         LU.info(msg)
@@ -71,15 +76,14 @@ def get_mongodb_version() -> str:
     db: Database = client['user_shopping_list']
     result: dict = db.command({'buildInfo': 1})
     key = 'version'
-    version: str = 'unknown'
+    version_number: str = 'unknown'
     if key in result.keys():
-        version = result.get(key)
-    # print(f'MongoDB {version=}')
-    return version
+        version_number = result.get(key)
+    return version_number
 
 
 def display_mongodb_collections():
-    print('DEBUG: top of display_mongodb_collections')
+    LU.debug('top of display_mongodb_collections')
     client = get_mongodb_client()
     # db = client['sample_mflix']
     databases = client.list_database_names()
@@ -87,8 +91,7 @@ def display_mongodb_collections():
     LU.info(msg)
     LU.debug(msg)
 
-    # print(f'{db.name=}')
-    # List all the collections in 'sample_mflix':
+    # List all the collections
     for db_info in client.list_database_names():
         msg = f'{db_info = }'
         LU.info(msg)
@@ -104,7 +107,7 @@ def display_mongodb_collections():
             print(f'{type(collection) = }')
         print(f'\t{collection = }')
     """
-    print('DEBUG: bottom of display_mongodb_collections')
+    LU.debug('bottom of display_mongodb_collections')
 
 
 def create_schema():
@@ -119,21 +122,13 @@ def create_schema():
         # 'name': StringField(required=False),
         # 'email': StringField(required=False),
     }
-    print(f'{user_properties=}')
+    LU.debug(f'{user_properties=}')
 
     for doc in documents:
         for field_name, value in doc.items():
             # Some smart recognition can be here
             field_definition = StringField()
             user_properties[field_name] = field_definition
-
-    '''
-    # Your new class for MongoEngine:
-    User = type("User", (Document,), user_properties)
-
-    users = User.objects(email__endswith='.com')
-    print(users)
-    '''
 
 
 def display_american_cuisine_restaurants():
@@ -162,9 +157,55 @@ def display_american_cuisine_restaurants():
     ])
     # examine the results
     for result in results:
-        # print(r)
-        msg = f"\nName: {result['name']}\n\tCuisine: {result['cuisine']}\n\tBorough: {result['borough']}\n\tZip: {result['address']['zipcode']}"
-        LU.log_info_and_debug(msg)
+        result_msg = f"\nName: {result['name']}\n\tCuisine: {result['cuisine']}\n\tBorough: {result['borough']}\n\tZip: {result['address']['zipcode']}"
+        LU.log_info_and_debug(result_msg)
+
+
+def display_restaurants_with_neighborhood_name() -> None:
+    LU.debug('top of display_restaurants_with_neighborhood_name')
+    client = get_mongodb_client()
+
+    db = client.sample_restaurants
+
+    # 2. Load neighborhoods and build polygons list
+    neighborhoods = list(db.neighborhoods.find())
+    neighborhood_polygons = []
+    for n in neighborhoods:
+        if "geometry" not in n or "name" not in n:
+            continue
+        polygon = shape(n["geometry"])
+        name = n["name"]
+        neighborhood_polygons.append((name, polygon))
+
+    # 3. Dictionary: neighborhood_name -> list of restaurants
+    matches = defaultdict(list)
+
+    for restaurant in db.restaurants.find({}, {"name": 1, "cuisine": 1, "address.coord": 1}):
+        coords = restaurant.get("address", {}).get("coord", [])
+        if not coords or len(coords) != 2:
+            continue
+
+        point = Point(coords)
+        matched_neighborhood = None
+
+        for name, polygon in neighborhood_polygons:
+            if polygon.contains(point):
+                matched_neighborhood = name
+                break
+
+        if matched_neighborhood:
+            matches[matched_neighborhood].append({
+                "name": restaurant['name'],
+                "cuisine": restaurant['cuisine']
+            })
+
+    # 4. Sort neighborhoods by count of restaurants descending
+    sorted_neighborhoods = sorted(matches.items(), key = lambda x: len(x[1]), reverse = True)
+
+    for neighborhood, restaurants in sorted_neighborhoods:
+        LU.debug(f"Neighborhood: {neighborhood} ({len(restaurants)} restaurants)")
+        for r in restaurants:
+            LU.debug(f"\t{r['name']} ({r['cuisine']})")
 
 
 def get_required_package_names() -> list[str]:
@@ -189,9 +230,10 @@ def get_required_package_names() -> list[str]:
 def main():
     verify_mongodb_connection_works()
     verify_mongodb_database()
-    display_american_cuisine_restaurants()
+    # display_american_cuisine_restaurants()
     # create_schema()
     display_mongodb_collections()
+    display_restaurants_with_neighborhood_name()
     LU.debug('DEBUG: end of program')
 
 
