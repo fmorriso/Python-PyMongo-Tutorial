@@ -18,7 +18,7 @@ class LoggingUtility():
         """
         log_format: str = '{time} - {name} - {level} - {function} - {message}'
         cls.__logger.remove()
-        cls.__logger.add(filename, format = log_format, rotation = '10 MB',
+        cls.__logger.add(filename, format = log_format, rotation = '50 MB',
                          retention = '5 days')
         # Add a handler that logs only DEBUG messages to stdout
         cls.__logger.add(sys.stdout, level = "DEBUG",
