@@ -199,12 +199,20 @@ def display_restaurants_with_neighborhood_name() -> None:
                 "cuisine": restaurant['cuisine']
             })
 
-    # 4. Sort neighborhoods by count of restaurants descending
-    sorted_neighborhoods = sorted(matches.items(), key = lambda x: len(x[1]), reverse = True)
+    # 4. Sort neighborhoods alphabetically
+    sorted_neighborhoods = sorted(matches.items(), key = lambda x: x[0])  # Sort by neighborhood name
+
+    # for neighborhood, restaurants in sorted_neighborhoods:
+    #     LU.debug(f"Neighborhood: {neighborhood} ({len(restaurants)} restaurants)")
+    #     for r in restaurants:
+    #         LU.debug(f"\t{r['name']} ({r['cuisine']})")
 
     for neighborhood, restaurants in sorted_neighborhoods:
-        LU.debug(f"Neighborhood: {neighborhood} ({len(restaurants)} restaurants)")
-        for r in restaurants:
+        # Sort restaurants alphabetically by name
+        sorted_restaurants = sorted(restaurants, key=lambda r: r["name"])
+
+        LU.debug(f"Neighborhood: {neighborhood} ({len(sorted_restaurants)} restaurants)")
+        for r in sorted_restaurants:
             LU.debug(f"\t{r['name']} ({r['cuisine']})")
 
 
