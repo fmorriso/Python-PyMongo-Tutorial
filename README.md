@@ -36,7 +36,7 @@ An example that closely follows the PyMongo Tutorial
 | 2025-05-18 | add logging                                              |
 | 2025-06-09 | streamline Logging                                       |
 | 2025-07-14 | use requirements.txt to show package version information |
-| 2025-08-23 | upgrade to Python 3.13.6                                 |
+| 2025-08-12 | upgrade to Python 3.13.6                                 |
 
 
 ## Installs
