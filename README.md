@@ -1,6 +1,13 @@
 # python-pymongo-tutorial
 An example that closely follows the PyMongo Tutorial
 
+## Developer Notes
+As of 2025-08-12, under VSCode 1.103 and Python 3.13.6, you cannot run this program because of the following error for which there is no known work-around:
+```text
+Fatal Python error: PyInterpreterState_Get: the function must be called with the GIL held, after Python initialization and before Python finalization, but the GIL is released (the current Python thread state is NULL)
+Python runtime state: unknown
+```
+
 ## References
 * [PyMongo Tutorial](https://pymongo.readthedocs.io/en/stable/tutorial.html)
 * [MongoDB Atlas API Services](https://learn.mongodb.com/courses/mongodb-atlas-api-services)
