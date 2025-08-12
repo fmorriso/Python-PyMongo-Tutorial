@@ -41,7 +41,7 @@ An example that closely follows the PyMongo Tutorial
 
 ## Installs
 * ```python -m pip install "pymongo[srv]"```
-* 
+
 ## What Mother (MongoDB and/or PyMongo) Never Told You But You need to know
 * WARNING: need to add ```authSource=admin``` to the Query String portion of the connection information in order for other useful commands to work:
 ```text
