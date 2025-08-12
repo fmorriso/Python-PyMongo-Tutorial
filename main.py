@@ -19,8 +19,15 @@ def get_python_version() -> str:
     return f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
 
 
-def get_package_version(package_name: str) -> str:
-    return version(package_name)
+def get_package_version(pkg_name: str) -> str:
+    """
+    returns the version number of the given package name
+    :param pkg_name: the name of the package
+    :type pkg_name: string (str)
+    :return: package version number.
+    :rtype: string (str)
+    """
+    return version(pkg_name)
 
 
 def get_connection_string() -> str:

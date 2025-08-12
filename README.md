@@ -7,14 +7,18 @@ An example that closely follows the PyMongo Tutorial
 
 ## Tools Used
 
-| Tool          |    Version |
-|:--------------|-----------:|
-| Python        |     3.13.5 |
-| loguru        |      0.7.3 |
-| MongoDB Atlas |     8.0.11 |
-| PyMongo       |     4.13.2 |
-| PyCharm       | 2025.1.3.1 |
-| VSCode        |    1.102.0 |
+| Tool          | Version |
+|:--------------|--------:|
+| Python        |  3.13.6 |
+| loguru        |   0.7.3 |
+| pathlib       |   1.0.1 |
+| MongoDB Atlas |  8.0.12 |
+| PyMongo       |  4.14.0 |
+| python-dotenv |   1.1.1 |
+| shapely       |   2.1.1 |
+| WTForms       |   3.2.1 |
+| PyCharm       |  2025.2 |
+| VSCode        | 1.103.0 |
 
 ## Change History
 
@@ -32,6 +36,7 @@ An example that closely follows the PyMongo Tutorial
 | 2025-05-18 | add logging                                              |
 | 2025-06-09 | streamline Logging                                       |
 | 2025-07-14 | use requirements.txt to show package version information |
+| 2025-08-23 | upgrade to Python 3.13.6                                 |
 
 
 ## Installs
